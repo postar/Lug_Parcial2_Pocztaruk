@@ -7,37 +7,32 @@ namespace BLL
 {
     public class EMPLEADO
     {
-		private int id;
+        DAL.MP_EMPLEADO mp = new DAL.MP_EMPLEADO();
+        public List<BE.EMPLEADO> Listar()
+        {
+            return mp.Listar();
+        }
 
-		public int Id
-		{
-			get { return id; }
-			set { id = value; }
-		}
+        public int Alta(BE.EMPLEADO EMPLEADO)
+        {
+            int resultado;
+            resultado = mp.Insertar(EMPLEADO);
+            return resultado;
+        }
 
-		private string nombre;
+        public int Modificacion(BE.EMPLEADO EMPLEADO)
+        {
+            int resultado;
+            resultado = mp.Editar(EMPLEADO);
+            return resultado;
+        }
 
-		public string Nombre
-		{
-			get { return nombre; }
-			set { nombre = value; }
-		}
+        public int Borrar(BE.EMPLEADO EMPLEADO)
+        {
+            return mp.Borrar(EMPLEADO);
+        }
 
-		private string apellido;
-
-		public string Apellido
-		{
-			get { return apellido; }
-			set { apellido = value; }
-		}
-
-		private float sueldoBruto;
-
-		public float SueldoBruto
-		{
-			get { return sueldoBruto; }
-			set { sueldoBruto = value; }
-		}
+        
 
 	}
 }

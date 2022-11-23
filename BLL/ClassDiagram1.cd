@@ -3,14 +3,14 @@
   <Class Name="BLL.EMPLEADO">
     <Position X="2.75" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAAAQAAACEAAAAggAAAAIAAAAAAAAAAAAAAgA=</HashCode>
+      <HashCode>AAAQAAAAAEAAAAAAAAAAAAAAAAAAQAAAAAACAAAAAAA=</HashCode>
       <FileName>EMPLEADO.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="BLL.RECIBO">
     <Position X="4.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAABAAAAAwAAAAIAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>RECIBO.cs</FileName>
     </TypeIdentifier>
   </Class>

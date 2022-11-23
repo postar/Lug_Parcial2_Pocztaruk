@@ -47,6 +47,10 @@
     <Compile Include="RECIBO.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BE\BE.csproj">
+      <Project>{efc0abf7-ff68-406d-8b7d-dc974ba139b0}</Project>
+      <Name>BE</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DAL\DAL.csproj">
       <Project>{7873168f-9a29-4a2a-8c1a-f37a2901b9fe}</Project>
       <Name>DAL</Name>

@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace BLL
+namespace DAL
 {
-    public class CONCEPTO
+    public class MP_RECIBO
     {
-        
-	}
+    }
 }
