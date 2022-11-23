@@ -4,13 +4,12 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Linq;
 using System.Text;
-using BE;
 
 namespace DAL
 {
     public class MP_EMPLEADO : MAPPER<BE.EMPLEADO>
     {
-        public override int Borrar(EMPLEADO entidad)
+        public override int Borrar(BE.EMPLEADO entidad)
         {
             List<SqlParameter> parametros = new List<SqlParameter>
             {
@@ -22,9 +21,9 @@ namespace DAL
             return res;
         }
 
-        public override EMPLEADO Convertir(DataRow registro)
+        public override BE.EMPLEADO Convertir(DataRow registro)
         {
-            BE.EMPLEADO EMPLEADO = new EMPLEADO();
+            BE.EMPLEADO EMPLEADO = new BE.EMPLEADO();
             EMPLEADO.Id = int.Parse(registro["ID"].ToString());
             EMPLEADO.Nombre = registro["nombre"].ToString();
             EMPLEADO.Apellido = registro["apellido"].ToString();
@@ -32,7 +31,7 @@ namespace DAL
             return EMPLEADO;
         }
 
-        public override int Editar(EMPLEADO entidad)
+        public override int Editar(BE.EMPLEADO entidad)
         {
             List<SqlParameter> parametros = new List<SqlParameter>
             {
@@ -47,7 +46,7 @@ namespace DAL
             return resultado;
         }
 
-        public override int Insertar(EMPLEADO emp)
+        public override int Insertar(BE.EMPLEADO emp)
         {
             List<SqlParameter> parametros = new List<SqlParameter>
             {
@@ -61,13 +60,13 @@ namespace DAL
             return res;
         }
 
-        public override List<EMPLEADO> Listar()
+        public override List<BE.EMPLEADO> Listar()
         {
             acceso.Abrir();
             DataTable tabla = acceso.Leer("Empleado_Listar");
             acceso.Cerrar();
 
-            List<EMPLEADO> EMPLEADOS = new List<EMPLEADO>();
+            List<BE.EMPLEADO> EMPLEADOS = new List<BE.EMPLEADO>();
             foreach (DataRow registro in tabla.Rows)
             {
                 EMPLEADOS.Add(Convertir(registro));

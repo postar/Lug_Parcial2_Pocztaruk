@@ -58,13 +58,17 @@ namespace Lug_Parcial2_Pocztaruk
                 MessageBox.Show("Complete los campos correctamente");
 
             }
-            empleado = new BE.EMPLEADO();
-            empleado.Id = int.Parse(textBox4.Text);
-            empleado.Nombre = textBox1.Text;
-            empleado.Apellido = textBox2.Text;
-            empleado.SueldoBruto = float.Parse(textBox3.Text);
-            gestorEmpleado.Modificacion(empleado);
-            EnlazarEmpleados();
+            else
+            {
+                empleado = new BE.EMPLEADO();
+                empleado.Id = int.Parse(textBox4.Text);
+                empleado.Nombre = textBox1.Text;
+                empleado.Apellido = textBox2.Text;
+                empleado.SueldoBruto = float.Parse(textBox3.Text);
+                gestorEmpleado.Modificacion(empleado);
+                EnlazarEmpleados();
+            }
+
 
         }
 
@@ -75,16 +79,13 @@ namespace Lug_Parcial2_Pocztaruk
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text) || string.IsNullOrWhiteSpace(textBox3.Text) || string.IsNullOrWhiteSpace(textBox4.Text))
+            if (string.IsNullOrWhiteSpace(textBox4.Text))
             {
                 MessageBox.Show("Complete los campos correctamente");
 
             }
             empleado = new BE.EMPLEADO();
             empleado.Id = int.Parse(textBox4.Text);
-            empleado.Nombre = textBox1.Text;
-            empleado.Apellido = textBox2.Text;
-            empleado.SueldoBruto = float.Parse(textBox3.Text);
             gestorEmpleado.Borrar(empleado);
             EnlazarEmpleados();
         }
